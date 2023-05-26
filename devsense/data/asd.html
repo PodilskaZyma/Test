@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS Cloud Architecture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AWS Cloud Architecture</h1>
+    <div class="container">
+        <div class="section">
+            <h2>User Interface (Frontend)</h2>
+            <div class="row">
+                <div class="column">CloudFront (CDN)</div>
+            </div>
+            <div class="row">
+                <div class="column">Load Balancer (ALB)</div>
+                <div class="column">Backend Application</div>
+            </div>
+            <div class="row">
+                <div class="column">Auto Scaling Group (Web Tier)</div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Backend Application (Backend API Server)</h2>
+            <div class="row">
+                <div class="column">Load Balancer (ALB)</div>
+                <div class="column">File Storage (S3, EFS, etc)</div>
+            </div>
+            <div class="row">
+                <div class="column">Auto Scaling Group (App Tier)</div>
+                <div class="column">Database Layer (RDS, DynamoDB, etc)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
